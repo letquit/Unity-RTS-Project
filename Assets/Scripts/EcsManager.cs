@@ -21,12 +21,10 @@ namespace SampleProject
             this.ecsWorld.BindComponent<MoveSpeedComponent>();
             this.ecsWorld.BindComponent<TransformComponent>();
             this.ecsWorld.BindComponent<AnimatorComponent>();
-            this.ecsWorld.BindComponent<MoveToPositionCommand>();
             
             // 绑定移动相关的系统
             this.ecsWorld.BindSystem<MovementSystem>();
             this.ecsWorld.BindSystem<MoveAnimationSystem>();
-            this.ecsWorld.BindSystem<MoveToPositionSystem>();
             
             // 安装并初始化ECS世界
             this.ecsWorld.Install();
@@ -63,3 +61,4 @@ namespace SampleProject
         }
     }
 }
+
